@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Administrador de Tareas</title>
         <link rel="stylesheet" href="stylesheet.css">
-        <link rel="shortcut icon" href="./img/favicon.png">
+        <link href="./img/notas.png">
     </head>
     <body>
         <nav>
@@ -12,20 +12,19 @@
             <p>Manager Task</p>
         </nav>
         <br>
-        <section id="section_form">
-            
+        <section id="section_form">         
             <div>
                 <form id="form">
                     <h1>Administrador de Tareas</h1>
-                    <label for="id">Id</label>
+                    <label>Id</label>
                     <input type="text" name="id" id="Id" placeholder="id">
-                    <label for="id">Descripcion</label>
+                    <label>Descripcion</label>
                     <input type="text" name="descriptions" id="descriptions" placeholder="descriptions">
-                    <label for="id">Prioridad</label>
+                    <label>Prioridad</label>
                     <input type="text" name="priority" id="priority" placeholder="Alta/Media/Baja">
-                    <label for="id">Estado</label>
+                    <label>Estado</label>
                     <input type="text" name="state" id="state" placeholder="abierto/cerrado">
-                    <input type="submit">
+                    <button type="submit">Add task</button>
                 </form>
             </div>
         </section>
@@ -33,16 +32,12 @@
         <section id="output">
             <p>Tareas</p>
             <div id="out">
-                        <ul class="list">
-                            <li id="_id">1</li>
-                            <li id="_desc">Avanzar arbol genialogico</li>
-                            <li id="_prio">Alta</li>
-                            <li id="_stat">Abierta</li>
-                        </ul>
+                        <ul class="list" id="list"></ul>
             </div>
         </section>
-        <div></div>
-        <footer>Todos los derechos reservados 2024</footer>
+        <footer>
+            <p id="p_footer">Todos los derechos reservados 2024</p>
+        </footer>
         <script src="bundle.js"></script>
     </body>
 </html>

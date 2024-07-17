@@ -1,14 +1,12 @@
-//Clase Tarea la cual tiene cinco propiedades y 3 metodos
-class Task {
-        static managerTasks = JSON.parse(localStorage.getItem('tasks')) || [];;   
+class Task { //Clase Tarea la cual tiene cinco propiedades y 3 metodos
+        static managerTasks = [];   
         constructor(id, descriptions, priority, state) {
           this.id = id;
           this.descriptions = descriptions;
           this.priority = priority;
           this.state = state;
         }    
-//Metodo para hacer push al array managerTask 
-        addTask() {
+        addTask() { //Metodo para hacer push al array managerTask 
           const newTask = {
             id: this.id,
             description: this.descriptions,
@@ -18,8 +16,7 @@ class Task {
           Task.managerTasks.push(newTask);
           localStorage.setItem('tasks', JSON.stringify(Task.managerTasks));
         }
-// Metodo para buscar por ID con la propiedad filter
-        static search(dni){
+        static search(dni){ // Metodo para buscar por ID con la propiedad filter
                 console.log("analizando")
                 const findId = Task.managerTasks.filter(task => {
                         return task.id.includes(dni);
@@ -31,19 +28,17 @@ class Task {
                         console.log("No tasks found with ID:", dni);
                         return [];
                     }
-        }     
-//Busqueda binaria implementa un arbol binario a traves del prototipado de dos objetos "Node y Tree_Binary"       
-        static searchBinary(){
-                const Node = function (task){
+        }            
+        static searchBinary(){ //Busqueda binaria implementa un arbol binario a traves del prototipado de dos objetos "Node y Tree_Binary"
+                const Node = function (task){ //Nodo
                         this.task = task,
                         this.left = null,
                         this.right = null
                 }
-
-                const Tree_Binary = function(){                     
+                const Tree_Binary = function(){ //Arbol               
                         this.root = null        
                 }        
-                Tree_Binary.prototype.add = function(task){
+                Tree_Binary.prototype.add = function(task){ 
                         const newNode = new Node(task);
                           if(this.root === null){
                               this.root = newNode;
@@ -75,15 +70,11 @@ class Task {
                         }
                         return result;
                     };
-
                     const tree = new Tree_Binary();
                     Task.managerTasks.forEach(task => tree.add(task));
-        
-        // Realizar un recorrido en orden para obtener las tareas ordenadas por ID
-                    const sortedTasks = tree.inOrder(tree.root);
+                    const sortedTasks = tree.inOrder(tree.root); // Realizar un recorrido en orden para obtener las tareas ordenadas por ID
                     console.log("Tasks sorted by ID:", sortedTasks);
-                    return sortedTasks;
-        
+                    return sortedTasks;      
         }
         
 }
