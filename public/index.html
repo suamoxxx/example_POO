@@ -1,0 +1,48 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Administrador de Tareas</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="shortcut icon" href="./img/favicon.png">
+    </head>
+    <body>
+        <nav>
+            <img src="./img/favicon.png" id="img">
+            <p>Manager Task</p>
+        </nav>
+        <br>
+        <section id="section_form">
+            
+            <div>
+                <form id="form">
+                    <h1>Administrador de Tareas</h1>
+                    <label for="id">Id</label>
+                    <input type="text" name="id" id="Id" placeholder="id">
+                    <label for="id">Descripcion</label>
+                    <input type="text" name="descriptions" id="descriptions" placeholder="descriptions">
+                    <label for="id">Prioridad</label>
+                    <input type="text" name="priority" id="priority" placeholder="Alta/Media/Baja">
+                    <label for="id">Estado</label>
+                    <input type="text" name="state" id="state" placeholder="abierto/cerrado">
+                    <input type="submit">
+                </form>
+            </div>
+        </section>
+
+        <section id="output">
+            <p>Tareas</p>
+            <div id="out">
+                        <ul class="list">
+                            <li id="_id">1</li>
+                            <li id="_desc">Avanzar arbol genialogico</li>
+                            <li id="_prio">Alta</li>
+                            <li id="_stat">Abierta</li>
+                        </ul>
+            </div>
+        </section>
+        <div></div>
+        <footer>Todos los derechos reservados 2024</footer>
+        <script src="bundle.js"></script>
+    </body>
+</html>
