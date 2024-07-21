@@ -1,21 +1,25 @@
+
 <html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Administrador de Tareas</title>
+        <title>Task Manager</title>
         <link rel="stylesheet" href="stylesheet.css">
         <link href="./img/notas.png">
     </head>
     <body>
         <nav>
-            <img src="./img/favicon.png" id="img">
-            <p>Manager Task</p>
+            <div id="sub-wave"></div>
+            <p class="p_nav">TASK MANAGER</p>
+            <img src="./img/pl.png" id="img-nav">
+            <div class="circle"></div>
         </nav>
         <br>
         <section id="section_form">         
             <div>
                 <form id="form">
-                    <h1>Administrador de Tareas</h1>
+                    <h1>Ingresa tu tareas</h1>
+                    <img src="./img/tarea.png" id="ico">
                     <label>Id</label>
                     <input type="text" name="id" id="Id" placeholder="id">
                     <label>Descripcion</label>
@@ -24,19 +28,25 @@
                     <input type="text" name="priority" id="priority" placeholder="Alta/Media/Baja">
                     <label>Estado</label>
                     <input type="text" name="state" id="state" placeholder="abierto/cerrado">
-                    <button type="submit">Add task</button>
+                    <button type="submit">Añadir tarea</button>
                 </form>
             </div>
         </section>
 
         <section id="output">
-            <p>Tareas</p>
+            <p>TAREAS</p>
             <div id="out">
                         <ul class="list" id="list"></ul>
             </div>
         </section>
+  
         <footer>
-            <p id="p_footer">Todos los derechos reservados 2024</p>
+            <div class="circle-two"></div>
+            <div class="circle-three"></div>
+            <div class="circle-four"></div>
+            <div class="circle-five"></div>
+            <p id="p_footer">Todos los derechos reservados 2024 &#xa9; by DFvL </p>
+            <div id="sub-wave"></div>
         </footer>
         <script src="bundle.js"></script>
     </body>

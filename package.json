@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "dev": "nodemon serve.js",
+    "dev": "nodemon serve.js && ./public/script.js && webpack  --mode development  --watch",
     "webpack": "webpack  --mode development  --watch"
   },
   "keywords": [],

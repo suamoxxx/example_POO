@@ -14,7 +14,7 @@ class Task { //Clase Tarea la cual tiene cinco propiedades y 3 metodos
             state: this.state
           };
           Task.managerTasks.push(newTask);
-          localStorage.setItem('tasks', JSON.stringify(Task.managerTasks));
+          localStorage.setItem('tasks', JSON.stringify(Task.managerTasks));//Envia al local Storage Api Builder
         }
         static search(dni){ // Metodo para buscar por ID con la propiedad filter
                 console.log("analizando")
@@ -22,10 +22,10 @@ class Task { //Clase Tarea la cual tiene cinco propiedades y 3 metodos
                         return task.id.includes(dni);
                 })
                 if (findId.length > 0) {
-                        console.log("Tasks found:", findId + "\n" + findId.length);
+                        console.log("Tarea encontrada:", findId + "\n" + findId.length);
                         return findId;
                     } else {
-                        console.log("No tasks found with ID:", dni);
+                        console.log("Tarea no econtrada con el ID:", dni);
                         return [];
                     }
         }            
@@ -59,8 +59,7 @@ class Task { //Clase Tarea la cual tiene cinco propiedades y 3 metodos
                           } else {
                              this.inserNode(node.right, newNode)
                             }
-                    }
-                
+                    } 
                 }
                 Tree_Binary.prototype.inOrder = function(node, result = []) {
                         if (node !== null) {
@@ -78,5 +77,5 @@ class Task { //Clase Tarea la cual tiene cinco propiedades y 3 metodos
         }
         
 }
-      
+
 export { Task }; 
