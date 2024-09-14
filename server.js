@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const cors = require('cors');
 app.set('port', process.env.PORT || 3005)
 const corsOptions = {
-    origin: 'http://127.0.0.1:3005',
+    origin: 'http://127.0.0.1:3005/*',
     optionsSuccessStatus: 200
 }
 app.use(cors(corsOptions));
