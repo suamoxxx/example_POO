@@ -1,6 +1,7 @@
 Gestión de Tareas con POO en JavaScript
 
 Descripción:
+
 Este proyecto es una aplicación de gestión de tareas desarrollada con JavaScript ES6, que implementa los principios de la Programación Orientada a Objetos (POO). La aplicación permite a los usuarios crear, buscar y ordenar tareas, utilizando funcionalidades como almacenamiento local (localStorage) y búsqueda binaria implementada con árboles binarios.
 
 Características Principales:
@@ -19,9 +20,8 @@ Estructura del Proyecto:
 ├── index.js
 ├── Task.js
 ├── img/
-│   ├── del.png
-│   └── edit.png
-└── README.md
+   ├── del.png
+   └── edit.png
 index.html: Archivo HTML principal que contiene la estructura de la interfaz de usuario.
 index.js: Archivo JavaScript principal que maneja la lógica de la aplicación y la interacción con el DOM.
 Task.js: Archivo JavaScript que define la clase Task y sus métodos.
@@ -38,6 +38,7 @@ Utiliza los botones de edición y eliminación para realizar acciones sobre las 
 Implementación de la Clase Task:
 
 La clase Task se define en el archivo Task.js y tiene las siguientes propiedades y métodos:
+
 Propiedades:
 id: Identificador único de la tarea.
 descriptions: Descripción de la tarea.
